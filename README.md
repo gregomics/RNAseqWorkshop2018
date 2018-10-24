@@ -27,7 +27,7 @@ Here you can find most of the scripts that were used during the RNA-seq workshop
     * Using a negative binomial distribution approach with DESeq2
   * Discussion on pvalue and hypothese testing
   * Multiple test correction
-  * How to plot RNA-seq results?
   * Discussion on RNA-seq unit: CPM, R/FPKM and TPM
+  * How to plot RNA-seq results?
 
-  * __DISCUSSION ON FOLLOW UP__
+  * __DISCUSSION ON FOLLOW UPs__
