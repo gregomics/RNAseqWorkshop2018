@@ -41,11 +41,15 @@ head ../count/CountMat_chr5.tsv
 #or to have Excel look and feel:
 
 gnumeric ../count/CountMat_chr5.tsv 
+
 ```
 
+File header:
 
 \# Program:featureCounts v1.6.3; Command:"featureCounts" "-a" "/mnt/RNAseq_Workshop_Data/genome/Ensembl_NCBIM37.67_chr5.gtf" "-o" "../count/CountMat_chr5.tsv" "-t" "exon" "-g" "gene_id" "-Q" "10" "-s" "1" "-p" "-T" "8" "WT1_sorted.bam" "WT2_sorted.bam" "WT3_sorted.bam" "KO1_sorted.bam" "KO2_sorted.bam" "KO3_sorted.bam"
+
+
+
 Geneid | Chr | Start | End | Strand | Length | WT1_sorted.bam | WT2_sorted.bam | WT3_sorted.bam | KO1_sorted.bam | KO2_sorted.bam | KO3_sorted.bam
 ------ | --- | ----- | --- | ------ | ------ | -------------- | -------------- | -------------- | -------------- | -------------- | --------------
 ENSMUSG00000090577 | chr5;chr5;chr5 | 3030238;3031011;3031960 | 3030381;3031194;3032082 | +;+;+ | 451 | 0 | 0 | 0 | 0 | 0 | 0
------------------- | -------------- | ----------------------- | ----------------------- | ----- | --- | - | - | - | - | - | -
