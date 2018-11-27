@@ -121,31 +121,3 @@ just have a look at the following coordinates: chr5:134,875,030-134,911,025
 What do you see?
 
 
-## Getting a count matrix:
-
-To get a matrix of count we will use [featureCounts ](https://www.ncbi.nlm.nih.gov/pubmed/23558742)
-
-```
-mkdir count
-
-cd mapping/
-
-featureCounts -a /mnt/RNAseq_Workshop_Data/genome/Ensembl_NCBIM37.67_chr5.gtf -o ../count/CountMat_chr5.tsv  -t exon \
-              -g gene_id -Q 10 -s 1 -p -T 8 WT1_sorted.bam WT2_sorted.bam WT3_sorted.bam KO1_sorted.bam KO2_sorted.bam KO3_sorted.bam
-
-```
-
-Important options:
-
-  * -a annotation file 
-  * -t What is the feature used to count the overlap
-  * -g feature to summarise against.
-  * -s strandness of the hit: 0: unstrand, 1: forward stranded, 2: reverse stranded.
-  * -p count paired reads as __one fragment__
-
-Other useful options (not used in this workshop)
-
-  * -J Count number of reads that span exon-exon junctions
-  * -L long reads
-
-
