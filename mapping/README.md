@@ -94,6 +94,34 @@ samtools view -b mapping/KO$i.sam -o  mapping/KO$i.bam
 done
 
 ```
+## Some stats on your mapping:
+
+```
+
+samtools flagstat mapping/WT1.bam
+262955 + 0 in total (QC-passed reads + QC-failed reads)
+35229 + 0 secondary
+0 + 0 supplementary
+0 + 0 duplicates
+260364 + 0 mapped (99.01% : N/A)
+227726 + 0 paired in sequencing
+113863 + 0 read1
+113863 + 0 read2
+220198 + 0 properly paired (96.69% : N/A)
+222704 + 0 with itself and mate mapped
+2431 + 0 singletons (1.07% : N/A)
+0 + 0 with mate mapped to a different chr
+0 + 0 with mate mapped to a different chr (mapQ>=5)
+
+```
+More stats ...
+
+```
+
+samtools stat mapping/WT1.bam
+
+```
+
 ## Vizualisation using IGV:
 
 Prior to see the alignment, the mapping file (e.i. BAM) should be sorted and indexed to gain efficiency. This can be done using samtools.
