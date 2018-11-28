@@ -80,4 +80,17 @@ KO1_R1.fastq.gz  KO2_R1.fastq.gz  KO3_R1.fastq.gz  WT1_R1.fastq.gz  WT2_R1.fastq
 KO1_R2.fastq.gz  KO2_R2.fastq.gz  KO3_R2.fastq.gz  WT1_R2.fastq.gz  WT2_R2.fastq.gz  WT3_R2.fastq.gz
 ```
 
-  
+## Starting the analysis
+
+To avoid to have files spread all over our computer, we will create a directory in our home to directory.
+
+```
+pwd
+/mnt/home//gimenez
+# home sweet home
+mkdir analysis
+cd analysis
+pwd
+/mnt/home//gimenez/analysis
+# I am ready to work now!
+```

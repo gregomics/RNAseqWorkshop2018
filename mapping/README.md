@@ -6,23 +6,28 @@ To be able to map (align) sequencing reads on the genome, the genome needs to be
 Note for speed reason, the reads will be aligned on the chr5 of the mouse genome.
 
 ```
-# need to go where the sequence is stored:
-cd genome
+cd /mnt/RNAseq_Workshop_Data/genome
 #to list what is in your directory:
-ls
+ls /mnt/RNAseq_Workshop_Data/genome/
 chr5.fa
-# only chromosome 5 available in this directory
+Ensembl_NCBIM37.67_chr5.gtf
+
+# only chromosome 5 fasta and gtf available in this directory
 
 # index file:
-hisat2-build -p 2 -f chr5.fa chr5
+hisat2-build -p 2 -f /mnt/RNAseq_Workshop_Data/genome/chr5.fa /mnt/RNAseq_Workshop_Data/genome/chr5
 
 # take around 3 mins
 #list what is in the directory:
-ls
+ls /mnt/RNAseq_Workshop_Data/genome/
 chr5.1.ht2  chr5.3.ht2  chr5.5.ht2  chr5.7.ht2  chr5.fa
-chr5.2.ht2  chr5.4.ht2  chr5.6.ht2  chr5.8.ht2
+chr5.2.ht2  chr5.4.ht2  chr5.6.ht2  chr5.8.ht2  Ensembl_NCBIM37.67_chr5.gtf
 
 ```
+Option info:
+  * -p number of threads
+  * -f fasta file
+
 How many files were created during the indexing process?
 
 ## Alignment on the genome (chromosome5)

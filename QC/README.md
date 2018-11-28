@@ -2,6 +2,23 @@
 
 Several tools available to do so. For this workshop, we will use fastqc.
 
+First, it is always good to verify where we are:
+
+```
+pwd
+/mnt/home/gimenez/analysis
+# good I am ready to work
+
+```
+Creating a directory where to store the QC data:
+
+```
+mkdir QC
+
+```
+
+Now we can start the quality control:
+
 ```
 fastqc -o QC/ /mnt/RNAseq_Workshop_Data/sequencing/WT1_R1.fastq.gz
 
