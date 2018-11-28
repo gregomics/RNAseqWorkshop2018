@@ -146,7 +146,8 @@ volcanoplot(fit, coef=2)
 ## ------------------------------------------------------------------------
 library(org.Mm.eg.db)
 sigGenes <- rownames(limmaPadj)
-select(org.Mm.eg.db, keys = head(sigGenes), column = "SYMBOL", keytype="ENSEMBL")
+select(org.Mm.eg.db, keys = head(sigGenes), column = c("SYMBOL","GENENAME), 
+    keytype="ENSEMBL")
 
 ## ------------------------------------------------------------------------
 allSigGenes <- select(org.Mm.eg.db, keys = sigGenes, column = "SYMBOL", 
