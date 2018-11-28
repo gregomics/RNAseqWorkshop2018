@@ -83,6 +83,11 @@ logCPM <- cpm(dge, log=TRUE, prior.count=0.5)
 head(logCPM)
 
 ## ------------------------------------------------------------------------
+## Use genelength data from dge to calculate rpkm values (not on log scale)
+rpkmData <- rpkm(dge)
+head(rpkmData)
+
+## ------------------------------------------------------------------------
 ## The function "t.test"" performs a two sample t-test in R.
 ## Perform t-test on first gene in data set (first row of matrix:
 ## first three values are WT, second three are KO):
