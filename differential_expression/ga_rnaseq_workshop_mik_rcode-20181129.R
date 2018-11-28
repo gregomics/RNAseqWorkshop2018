@@ -36,6 +36,7 @@ plot( density(logCounts[,1]) )
 for(i in 2:6) lines( density(logCounts[,i]) )
 
 ## ------------------------------------------------------------------------
+library(edgeR)
 library(limma)
 
 ## ------------------------------------------------------------------------
@@ -96,8 +97,8 @@ t.test(logCPM[1,]~groups)$p.value
 2^(2.886-2.544) 
 
 ## ------------------------------------------------------------------------
-## Examine expression graphically using a boxplot:
-dotplot(logCPM[1,]~groups, main=rownames(logCPM)[1],
+## Examine expression graphically using a dotplot:
+lattice::dotplot(logCPM[1,]~groups, main=rownames(logCPM)[1],
            ylab='Log2 Expression')
 
 ## ------------------------------------------------------------------------
@@ -128,7 +129,7 @@ t.test(logCPM[topGene,] ~ groups)
 # "Raw" data agrees with logFC (WT - KO): -4.405 - 2.613 = -7.018
 
 ## ------------------------------------------------------------------------
-dotplot(logCPM[topGene,] ~ groups, main=rownames(logCPM)[topGene],
+lattice::dotplot(logCPM[topGene,] ~ groups, main=rownames(logCPM)[topGene],
            ylab='Log2 Expression')
 
 ## ------------------------------------------------------------------------
