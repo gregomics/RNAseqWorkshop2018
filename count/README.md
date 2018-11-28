@@ -53,3 +53,23 @@ File header:
 Geneid | Chr | Start | End | Strand | Length | WT1_sorted.bam | WT2_sorted.bam | WT3_sorted.bam | KO1_sorted.bam | KO2_sorted.bam | KO3_sorted.bam
 ------ | --- | ----- | --- | ------ | ------ | -------------- | -------------- | -------------- | -------------- | -------------- | --------------
 ENSMUSG00000090577 | chr5;chr5;chr5 | 3030238;3031011;3031960 | 3030381;3031194;3032082 | +;+;+ | 451 | 0 | 0 | 0 | 0 | 0 | 0
+
+Now, let's have a look at the summary file:
+
+```
+cat CountMat_chr5.tsv.summary
+
+Status	WT1_sorted.bam	WT2_sorted.bam	WT3_sorted.bam	KO1_sorted.bam	KO2_sorted.bamKO3_sorted.bam
+Assigned	11793	9508	10617	9639	10278	9653
+Unassigned_Unmapped	80	46	82	93	58	64
+Unassigned_MappingQuality	89	31	48	60	46	43
+Unassigned_Chimera	0	0	0	0	0	0
+Unassigned_FragmentLength	0	0	0	0	0	0
+Unassigned_Duplicate	0	0	0	0	0	0
+Unassigned_MultiMapping	23248	15861	22103	13815	29572	20306
+Unassigned_Secondary	0	0	0	0	0	0
+Unassigned_Nonjunction	0	0	0	0	0	0
+Unassigned_NoFeatures	96383	88984	106545	88874	56047	69737
+Unassigned_Overlapping_Length	0	0	0	0	0	0
+Unassigned_Ambiguity	95	63	71	78	81	79
+```
