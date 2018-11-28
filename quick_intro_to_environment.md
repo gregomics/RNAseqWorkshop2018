@@ -18,15 +18,20 @@ Once you are log in, you will be facing a linux machine. Now don\'t escape :)'
 
 Open a terminal (Also know as shell). To do so, click on start (down left corner), then System tools then LXTerminal.
 
-You will see a terminal will open.
 
 ![Screenshot of GVL](figures/welcome2GVL.png)
 
+You will see a terminal will open.
+
+![Screenshot of GVL terminal](figures/HereIsATerminal.png)
 
 ### using the terminal
 
 For this workshop you will need to know few shell commands. 
 Recommended: shell tutorial from Software Carpentry: [here](https://swcarpentry.github.io/shell-novice/)
+To interact with a shell you will need to __write command__ and press enter.
+
+Here is a list of the shell command that we will use:
 
   * Need to know where you are: 
 
