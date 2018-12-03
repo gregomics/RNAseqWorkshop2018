@@ -7,7 +7,8 @@ mkdir count
 
 cd mapping/
 
-featureCounts -a /mnt/RNAseq_Workshop_Data/genome/Ensembl_NCBIM37.67_chr5.gtf -o ../count/CountMat_chr5.tsv  -t exon \
+featureCounts -a /mnt/RNAseq_Workshop_Data/genome/Ensembl_Mus_musculus.GRCm38.94_ch5.gtf -o ../count/CountMat_chr5.tsv\
+   -t exon \
               -g gene_id -Q 10 -s 1 -p -T 8 WT1_sorted.bam WT2_sorted.bam WT3_sorted.bam KO1_sorted.bam KO2_sorted.bam KO3_sorted.bam
 
 ```
@@ -46,7 +47,7 @@ gnumeric ../count/CountMat_chr5.tsv
 
 File header:
 
-\# Program:featureCounts v1.6.3; Command:"featureCounts" "-a" "/mnt/RNAseq_Workshop_Data/genome/Ensembl_NCBIM37.67_chr5.gtf" "-o" "../count/CountMat_chr5.tsv" "-t" "exon" "-g" "gene_id" "-Q" "10" "-s" "1" "-p" "-T" "8" "WT1_sorted.bam" "WT2_sorted.bam" "WT3_sorted.bam" "KO1_sorted.bam" "KO2_sorted.bam" "KO3_sorted.bam"
+\# Program:featureCounts v1.6.3; Command:"featureCounts" "-a" "/mnt/RNAseq_Workshop_Data/genome/Ensembl_Mus_musculus.GRCm38.94_ch5.gtf" "-o" "../count/CountMat_chr5.tsv" "-t" "exon" "-g" "gene_id" "-Q" "10" "-s" "1" "-p" "-T" "8" "WT1_sorted.bam" "WT2_sorted.bam" "WT3_sorted.bam" "KO1_sorted.bam" "KO2_sorted.bam" "KO3_sorted.bam"
 
 
 
