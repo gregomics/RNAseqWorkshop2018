@@ -43,7 +43,7 @@ Information required:
 
 ```
 # syntax:
-hisat2 -x /mnt/RNAseq_Workshop_Data/genome/chr5 -1 trimmed/WT1_R1_trimmed.fastq -2 trimmed/WT1_R2_trimmed.fastq --rna-strandness RF -S mapping/WT1.sam
+hisat2 -x /mnt/RNAseq_Workshop_Data/genome/chr5 -1 trimmed/WT1_R1_trimmed.fastq -2 trimmed/WT1_R2_trimmed.fastq  -S mapping/WT1.sam
 
 ```
 Now we need to align all the rest of the samples.
@@ -57,9 +57,9 @@ Hint: looping over the files?
 for i in `seq 1 3`; 
 do
 # processing WT first:
-hisat2 -x /mnt/RNAseq_Workshop_Data/genome/chr5 -1 trimmed/WT$i\_R1_trimmed.fastq -2 trimmed/WT$i\_R2_trimmed.fastq --rna-strandness RF -S mapping/WT$i.sam
+hisat2 -x /mnt/RNAseq_Workshop_Data/genome/chr5 -1 trimmed/WT$i\_R1_trimmed.fastq -2 trimmed/WT$i\_R2_trimmed.fastq  -S mapping/WT$i.sam
 # processing KO
-hisat2 -x /mnt/RNAseq_Workshop_Data/genome/chr5 -1 trimmed/KO$i\_R1_trimmed.fastq -2 trimmed/KO$i\_R2_trimmed.fastq --rna-strandness RF -S mapping/KO$i.sam
+hisat2 -x /mnt/RNAseq_Workshop_Data/genome/chr5 -1 trimmed/KO$i\_R1_trimmed.fastq -2 trimmed/KO$i\_R2_trimmed.fastq  -S mapping/KO$i.sam
 
 done
 
@@ -99,17 +99,17 @@ done
 ```
 
 samtools flagstat mapping/WT1.bam
-262955 + 0 in total (QC-passed reads + QC-failed reads)
-35229 + 0 secondary
+262944 + 0 in total (QC-passed reads + QC-failed reads)
+35218 + 0 secondary
 0 + 0 supplementary
 0 + 0 duplicates
-260364 + 0 mapped (99.01% : N/A)
+260442 + 0 mapped (99.05% : N/A)
 227726 + 0 paired in sequencing
 113863 + 0 read1
 113863 + 0 read2
-220198 + 0 properly paired (96.69% : N/A)
-222704 + 0 with itself and mate mapped
-2431 + 0 singletons (1.07% : N/A)
+220394 + 0 properly paired (96.78% : N/A)
+222892 + 0 with itself and mate mapped
+2332 + 0 singletons (1.02% : N/A)
 0 + 0 with mate mapped to a different chr
 0 + 0 with mate mapped to a different chr (mapQ>=5)
 
@@ -151,10 +151,16 @@ According to the paper, KO construction is *"A loss of function mutation of Gtf2
 
 load your sorted bam file: for WT1 and KO1 click on File then Load from File ... and browse to your bam files.
 
-Now have a look at the following coordinates: chr5:134,417,000-134,417,200
+Now have a look at the gene Gtf2ird1 and zoom in slightly to see the alignment: chr5:134,387,384-134,426,993
 
   * What do you see?
   * What strand is the library type?
-  * What is the quality?
 
+if you don't know what is the library type then you can guess according to the mapping. Here is how you can do it:
+
+  * right click on the WT1_sorted.bam alignment
+  * click on Group alignment by then first in pair strand
+  * click on Color alignment by then first in pair strand
+
+What do you see?
 
