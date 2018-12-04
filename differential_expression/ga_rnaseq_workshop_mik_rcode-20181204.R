@@ -123,7 +123,7 @@ design
 library(limma)
 ## Fit linear model
 fit = lmFit(logCPM, design)
-fit = eBayes(fit)
+fit = eBayes(fit, trend=TRUE)
 tt = topTable(fit, coef=2, adjust="BH", n=nrow(logCPM))
 options(digits=4)
 tt[1:5,]
